@@ -4,7 +4,6 @@ import java.util.*;
 import java.util.function.Predicate;
 
 /**
- *
  * @author Kosolapov Ilya (d_dexter@mail.ru)
  */
 public class BFS {
@@ -22,9 +21,7 @@ public class BFS {
                     break;
                 }
                 searched.add(current);
-                for (T element : graph.get(current)) {
-                    deque.offer(element);
-                }
+                deque.addAll(graph.get(current));
             }
         } while (!deque.isEmpty());
         return result;

@@ -34,11 +34,13 @@ public class Quicksort {
             }
         }
         count++;
-        return new ArrayList<Integer>() {{
+        return new ArrayList<Integer>() {
+            {
             addAll(quicksort(max));
             add(pivot);
             addAll(quicksort(min));
-        }};
+            }
+        };
 
 
     }

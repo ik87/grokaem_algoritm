@@ -26,9 +26,10 @@ public class BFSTest {
 
     @Test
     public void whenSearchNameThenGetIt() {
-        String result = BFS.bfs(graph,"you", (x) -> {
+        String result = BFS.bfs(graph, "you", (x) -> {
             System.out.print(x + " ");
-            return "peggy".equals(x);});
+            return "peggy".equals(x);
+        });
         assertThat("peggy", is(result));
     }
 
